@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartHire Consultancy - Premier Online Recruitment & Staffing Solutions</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Theme Extension -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617',
+                        },
+                        teal: {
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-teal-500 selection:text-white">
+
+    <!-- NAVIGATION BAR -->
+    <nav class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-3 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                    <div class="w-11 h-11 bg-teal-600 rounded-xl flex items-center justify-center text-white text-xl font-bold shadow-md shadow-teal-600/30">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <div>
+                        <span class="text-2xl font-extrabold tracking-tight text-navy-900 block leading-none">Smart<span class="text-teal-600">Hire</span></span>
+                        <span class="text-[10px] text-slate-500 font-semibold tracking-widest uppercase">Consultancy</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation Links -->
+                <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-700">
+                    <a href="#hero" class="hover:text-teal-600 transition-colors">Home</a>
+                    <a href="#services" class="hover:text-teal-600 transition-colors">Services</a>
+                    <a href="#categories" class="hover:text-teal-600 transition-colors">Job Categories</a>
+                    <a href="#testimonials" class="hover:text-teal-600 transition-colors">Reviews</a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <a href="#hero" class="bg-teal-600 hover:bg-teal-700 text-white px-5 py-2.5 rounded-xl font-semibold shadow-lg shadow-teal-600/20 hover:shadow-teal-600/40 transition-all transform hover:-translate-y-0.5 text-sm flex items-center gap-2">
+                        <i class="fa-solid fa-bolt"></i>
+                        Pay ₹499 & Apply
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Hamburger Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-700 hover:text-teal-600 p-2 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#hero" class="block py-2 font-medium text-slate-700 hover:text-teal-600" onclick="toggleMobileMenu()">Home</a>
+            <a href="#services" class="block py-2 font-medium text-slate-700 hover:text-teal-600" onclick="toggleMobileMenu()">Services</a>
+            <a href="#categories" class="block py-2 font-medium text-slate-700 hover:text-teal-600" onclick="toggleMobileMenu()">Job Categories</a>
+            <a href="#testimonials" class="block py-2 font-medium text-slate-700 hover:text-teal-600" onclick="toggleMobileMenu()">Reviews</a>
+            <div class="pt-2">
+                <a href="#hero" onclick="toggleMobileMenu()" class="w-full bg-teal-600 text-white py-3 rounded-xl font-semibold text-center flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-bolt"></i> Pay ₹499 & Apply
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative bg-gradient-to-b from-navy-900 via-navy-800 to-slate-900 text-white pt-12 pb-20 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#14b8a6_1px,transparent_1px)] [background-size:20px_20px]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Hero Left Content Banner -->
+                <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-amber-500/20 border border-amber-500/40 text-amber-300 px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold tracking-wide">
+                        <i class="fa-solid fa-fire text-amber-400"></i> Premium Pass @ ₹499 (Regular Price <span class="line-through text-slate-400">₹1,999</span>)
+                    </div>
+                    
+                    <h1 class="text-3xl sm:text-5xl lg:text-5xl font-extrabold leading-tight tracking-tight">
+                        Connecting Premier <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-emerald-300">Talent</span> With Industry Leaders.
+                    </h1>
+                    
+                    <p class="text-slate-300 text-base sm:text-lg font-light leading-relaxed">
+                        SmartHire Consultancy bridges the gap between top professionals and top-tier companies. Get guaranteed interview opportunities with top firms in IT, Sales, Digital Marketing, and Corporate Roles.
+                    </p>
+
+                    <!-- Quick Stats Counter -->
+                    <div class="grid grid-cols-3 gap-4 pt-6 border-t border-slate-800/80 max-w-lg mx-auto lg:mx-0">
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-teal-400">1,000+</p>
+                            <p class="text-xs sm:text-sm text-slate-400 font-medium">Placements Done</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-teal-400">150+</p>
+                            <p class="text-xs sm:text-sm text-slate-400 font-medium">Partner Companies</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-teal-400">98%</p>
+                            <p class="text-xs sm:text-sm text-slate-400 font-medium">Success Rate</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/60 border border-slate-700/80 rounded-2xl p-4 text-xs text-slate-300 space-y-2">
+                        <p class="font-bold text-teal-400 text-sm flex items-center gap-1.5">
+                            <i class="fa-solid fa-circle-check text-emerald-400"></i> What you get for ₹499 Registration:
+                        </p>
+                        <ul class="list-disc list-inside space-y-1 pl-1 text-slate-300">
+                            <li>Guaranteed 3-5 Direct HR Interview Calls</li>
+                            <li>ATS Resume Optimization & Formatting</li>
+                            <li>100% Refund if no interviews in 30 days</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Hero Right Embedded Google Form -->
+                <div class="lg:col-span-6">
+                    <div class="glass-card rounded-3xl p-3 sm:p-4 shadow-2xl border border-slate-200 text-slate-800">
+                        <div class="bg-teal-600 text-white text-center py-2 px-4 rounded-xl font-bold text-sm mb-3 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-wpforms"></i> Candidate Registration Form
+                        </div>
+
+                        <!-- Embedded Google Form Iframe -->
+                        <div class="w-full overflow-hidden rounded-2xl border border-slate-200">
+                            <iframe 
+                                src="https://docs.google.com/forms/d/e/1FAIpQLSeyeY2lr0kbJbG1ufW4lAuum_S59JPf_L3GEwvqAIOc6KJxhQ/viewform?embedded=true" 
+                                width="100%" 
+                                height="700" 
+                                frameborder="0" 
+                                marginheight="0" 
+                                marginwidth="0"
+                                class="w-full">
+                                Loading…
+                            </iframe>
+                        </div>
+
+                        <!-- Trust Badge -->
+                        <div class="flex items-center justify-center gap-2 pt-3 text-[11px] text-slate-500 font-medium">
+                            <i class="fa-solid fa-shield-halved text-emerald-600"></i> 100% Safe & Secure Application Process
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold text-teal-600 uppercase tracking-widest mb-2">Our Solutions</h2>
+                <h3 class="text-3xl font-extrabold text-navy-900 sm:text-4xl">End-to-End Career & Hiring Support</h3>
+                <p class="mt-4 text-slate-600">We go beyond matching resumes—we prepare candidates and empower businesses to scale seamlessly.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:shadow-xl hover:border-teal-100 transition-all group">
+                    <div class="w-14 h-14 bg-teal-100 text-teal-600 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-teal-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-file-pen"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-navy-900 mb-3">ATS Resume Optimization</h4>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        Professional resume editing included in your ₹499 pass to pass Applicant Tracking Systems (ATS).
+                    </p>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:shadow-xl hover:border-teal-100 transition-all group">
+                    <div class="w-14 h-14 bg-teal-100 text-teal-600 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-teal-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-navy-900 mb-3">Interview Prep</h4>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        One-on-one mock interview sessions and feedback to boost confidence and performance.
+                    </p>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:shadow-xl hover:border-teal-100 transition-all group">
+                    <div class="w-14 h-14 bg-teal-100 text-teal-600 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-teal-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-building-circle-check"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-navy-900 mb-3">Direct HR Placement</h4>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        Direct interviews with verified partner companies without middlemen or extra post-selection charges.
+                    </p>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:shadow-xl hover:border-teal-100 transition-all group">
+                    <div class="w-14 h-14 bg-teal-100 text-teal-600 rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-teal-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-shield-heart"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-navy-900 mb-3">Money-Back Guarantee</h4>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        100% refund of ₹499 registration fee if we fail to schedule interviews within 30 days.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JOB CATEGORIES SECTION -->
+    <section id="categories" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12">
+                <h2 class="text-xs font-bold text-teal-600 uppercase tracking-widest mb-2">In-Demand Fields</h2>
+                <h3 class="text-3xl font-extrabold text-navy-900">Explore Top Job Categories</h3>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="#hero" class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-all flex items-center justify-between cursor-pointer">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-bullhorn"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-navy-900">Digital Marketing</h4>
+                            <p class="text-xs text-slate-500">SEO, Social Media, Ads</p>
+                        </div>
+                    </div>
+                    <span class="bg-teal-50 text-teal-700 text-xs font-semibold px-2.5 py-1 rounded-full">25+ Openings</span>
+                </a>
+
+                <a href="#hero" class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-all flex items-center justify-between cursor-pointer">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-navy-900">Sales & Telecalling</h4>
+                            <p class="text-xs text-slate-500">Inside Sales, Customer Care</p>
+                        </div>
+                    </div>
+                    <span class="bg-teal-50 text-teal-700 text-xs font-semibold px-2.5 py-1 rounded-full">50+ Openings</span>
+                </a>
+
+                <a href="#hero" class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-all flex items-center justify-between cursor-pointer">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-purple-50 text-purple-600 rounded-xl flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-navy-900">IT & Tech Support</h4>
+                            <p class="text-xs text-slate-500">Developers, IT Helpdesk</p>
+                        </div>
+                    </div>
+                    <span class="bg-teal-50 text-teal-700 text-xs font-semibold px-2.5 py-1 rounded-full">30+ Openings</span>
+                </a>
+
+                <a href="#hero" class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-all flex items-center justify-between cursor-pointer">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-truck-ramp-box"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-navy-900">Logistics & Operations</h4>
+                            <p class="text-xs text-slate-500">Fleet, Supply Chain</p>
+                        </div>
+                    </div>
+                    <span class="bg-teal-50 text-teal-700 text-xs font-semibold px-2.5 py-1 rounded-full">40+ Openings</span>
+                </a>
+
+                <a href="#hero" class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-all flex items-center justify-between cursor-pointer">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-rose-50 text-rose-600 rounded-xl flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-coins"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-navy-900">Finance & Accounting</h4>
+                            <p class="text-xs text-slate-500">Accountants, Analysts</p>
+                        </div>
+                    </div>
+                    <span class="bg-teal-50 text-teal-700 text-xs font-semibold px-2.5 py-1 rounded-full">20+ Openings</span>
+                </a>
+
+                <a href="#hero" class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-all flex items-center justify-between cursor-pointer">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-navy-900">Office Admin & HR</h4>
+                            <p class="text-xs text-slate-500">Exec Assistants, Recruiters</p>
+                        </div>
+                    </div>
+                    <span class="bg-teal-50 text-teal-700 text-xs font-semibold px-2.5 py-1 rounded-full">15+ Openings</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section id="testimonials" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold text-teal-600 uppercase tracking-widest mb-2">Success Stories</h2>
+                <h3 class="text-3xl font-extrabold text-navy-900 sm:text-4xl">Trusted by Candidates & Companies</h3>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 space-y-4">
+                    <div class="flex text-amber-400 gap-1 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        "Paying ₹499 was the best decision. Got 3 interview calls within 5 days and landed a Digital Marketing role with a great package!"
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <div class="w-10 h-10 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold text-sm">AM</div>
+                        <div>
+                            <p class="font-bold text-sm text-navy-900">Alex Miller</p>
+                            <p class="text-xs text-slate-500">Marketing Specialist</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 space-y-4">
+                    <div class="flex text-amber-400 gap-1 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        "Very transparent process. They modified my resume for ATS and scheduled direct HR rounds. Totally worth the registration fee."
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <div class="w-10 h-10 bg-navy-800 text-white rounded-full flex items-center justify-center font-bold text-sm">SR</div>
+                        <div>
+                            <p class="font-bold text-sm text-navy-900">Rahul Sharma</p>
+                            <p class="text-xs text-slate-500">Sales Executive</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 space-y-4">
+                    <div class="flex text-amber-400 gap-1 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        "Professional team. The mock interviews helped rebuild my confidence after a 1-year career gap."
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <div class="w-10 h-10 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold text-sm">DK</div>
+                        <div>
+                            <p class="font-bold text-sm text-navy-900">Pooja K.</p>
+                            <p class="text-xs text-slate-500">HR Associate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy-900 text-slate-400 pt-16 pb-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2 text-white">
+                        <div class="w-8 h-8 bg-teal-500 rounded-lg flex items-center justify-center text-navy-900 font-bold">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <span class="text-xl font-bold tracking-tight">Smart<span class="text-teal-400">Hire</span></span>
+                    </div>
+                    <p class="text-sm leading-relaxed">
+                        Your trusted career partner and staffing consultancy. Connecting high-potential professionals with top organizations.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wider">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#hero" class="hover:text-teal-400 transition-colors">Home</a></li>
+                        <li><a href="#services" class="hover:text-teal-400 transition-colors">Our Services</a></li>
+                        <li><a href="#categories" class="hover:text-teal-400 transition-colors">Job Categories</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wider">Contact Us</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-teal-400"></i> contact@smarthire.com
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-teal-400"></i> +91 98765 43210
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-location-dot text-teal-400"></i> Govt Regd Consultancy
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wider">Follow Us</h4>
+                    <div class="flex space-x-3">
+                        <a href="#" class="w-10 h-10 bg-slate-800 hover:bg-teal-600 hover:text-white rounded-xl flex items-center justify-center transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="w-10 h-10 bg-slate-800 hover:bg-teal-600 hover:text-white rounded-xl flex items-center justify-center transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 bg-slate-800 hover:bg-teal-600 hover:text-white rounded-xl flex items-center justify-center transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs">
+                <p>&copy; 2026 SmartHire Consultancy. All rights reserved.</p>
+                <p class="mt-2 sm:mt-0">100% Secure Payment & Confidential Placement</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919876543210?text=Hello%20SmartHire,%20I%20have%20a%20query%20regarding%20the%20%E2%82%B9499%20Job%20Registration." target="_blank" class="fixed bottom-6 right-6 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-2xl z-40 transition-transform hover:scale-110" title="Contact Us on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        mobileBtn.addEventListener('click', toggleMobileMenu);
+    </script>
+</body>
+</html>
